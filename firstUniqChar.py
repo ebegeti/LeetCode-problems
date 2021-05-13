@@ -1,4 +1,6 @@
-
+'''
+Given a string s, return the first non-repeating character in it and return its index. If it does not exist, return -1.
+'''
 def firstUniqChar( s):
     """
     :type prices: List[int]
