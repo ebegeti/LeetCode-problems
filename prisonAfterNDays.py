@@ -1,3 +1,17 @@
+'''
+There are 8 prison cells in a row and each cell is either occupied or vacant.
+
+Each day, whether the cell is occupied or vacant changes according to the following rules:
+
+If a cell has two adjacent neighbors that are both occupied or both vacant, then the cell becomes occupied.
+Otherwise, it becomes vacant.
+Note that because the prison is a row, the first and the last cells in the row can't have two adjacent neighbors.
+
+You are given an integer array cells where cells[i] == 1 if the ith cell is occupied and cells[i] == 0 if the ith cell is vacant, and you are given an integer n.
+
+Return the state of the prison after n days (i.e., n such changes described above).
+'''
+
 def prisonAfterNDays(cells, n):
     """
     :type cells: List[int]
@@ -20,19 +34,5 @@ def prisonAfterNDays(cells, n):
 
     return cells
 
-    # future_cells = list()
-    # if N == 1:
-    #     return cells
-    #
-    # for i in range(len(cells)):
-    #     if i == 0 or i == len(cells) - 1:
-    #         future_cells.append(0)
-    #     else:
-    #         if (cells[i - 1] and cells[i + 1]) or (not cells[i - 1] and not cells[i + 1]):
-    #             future_cells.append(1)
-    #         else:
-    #             future_cells.append(0)
-    #
-    # print(prisonAfterNDays(future_cells, N - 1))
 
 prisonAfterNDays([0,1,0,1,1,0,0,1],7)
